@@ -1,7 +1,7 @@
 # ECE143Project
 Repository for ECE 143 Project Fall 2023
 
-#Project Summary
+Project Summary
 With the dataset of Parking Citations in the San Diego area published by the City Treasurer, along with the population data and the parking meters data, we conducted a series of analysis including Statistical Exploration, Time-Series Heat Map Visualization, Seasonal Decomposation, Linear Regression, Geospatial Heat Map Visualization and Interactive Map Folium to explore the characteristics of the parking tickets from the perspectives of time and space.  
 
 Our research conclusion shows when and where more parking tickets can be found, and explains the factors that may contribute to such characteristic. Moreover, we provide some tips for parking when it’s almost impossible to park in the parking lot.
@@ -18,7 +18,7 @@ The dataset issued by City Treasurer contains Parking Meters data since 2018 in 
 Resource: https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html
 The dataset issued by US Census Bureau contains population statistics in San Diego in a yearly frequency.
 
-#Files Introduction
+Files Introduction
 datasets_merge.py: It merges the datasets that are originally published in a hal-year frequency.
 Data Analysis.ipynb: It generates the series of visualizations from the statistical exploration.
 date_count_heatmap.py: It generates the Time-Series Heatmap of the parking tickets.
