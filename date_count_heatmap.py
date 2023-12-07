@@ -243,5 +243,5 @@ def time_heatmap(df):
     plt.show()
 
 
-df = parse_cols_basic()
-time_heatmap(df)
+#df = parse_cols_basic()
+#time_heatmap(df)
