@@ -242,6 +242,15 @@ def time_heatmap(df):
     # displaying the plotted heatmap 
     plt.show()
 
+def main(df): #for file imports, call 
+    '''
+    Creates the relevant heatmaps for ECE 143 Final Project
+    df: dataframe with parking citation data in order in time
+    '''
+    assert isinstance(df, pd.DataFrame)
 
-#df = parse_cols_basic()
-#time_heatmap(df)
+    time_heatmap(df)
+
+# conditional for main
+#if __name__ == "__main__":
+#    main()
