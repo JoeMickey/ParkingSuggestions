@@ -2,6 +2,7 @@
 
 import pandas as pd
 import time_series_analysis
+import EDA
 
 def read_dataset():
     '''
