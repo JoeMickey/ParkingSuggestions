@@ -26,11 +26,11 @@ def read_dataset():
     
     con_list = []
     for f in read_list_rev:
-        df = pd.read_csv('./Datasets/Parking Ticket Datasets' + f) # make sure to change this to the correct python read path
+        df = pd.read_csv('./Datasets/Parking Ticket Databases' + f) # make sure to change this to the correct python read path
         df = df.reindex(index=df.index[::-1])
         con_list.append(df)
     for f in read_list_norm:
-        df = pd.read_csv('./Datasets/Parking Ticket Datasets' + f) # make sure to change this to the correct python read path
+        df = pd.read_csv('./Datasets/Parking Ticket Databases' + f) # make sure to change this to the correct python read path
         con_list.append(df)
     
     output_df = pd.concat(con_list)
