@@ -23,6 +23,9 @@ Datasets
     - `future_scope.py`: codes for parking suggestion generation 
     - `suggestion_model.pkl`: model for suggestion generation
     - `OneHotEncoders.pkl`: one-hot encoders for suggestion generation
+ 
+- `ECE143-Group10_Final Presentation.pdf`: final presentation slides for our project
+- `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
 
 
 
