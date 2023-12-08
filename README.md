@@ -32,9 +32,27 @@ Datasets
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
 
 - `Functions/`:
-    - `date_count_heatmap.main(df)/`:
+    - `date_count(df)`
         - `df`: dataframe object containing parking citations in sorted order from Jan 2012 to Oct 2023
-        - `Desc.`: Parses data and creates  all time series graphics
+        - `Desc.`: returns a dataframe consisting of the date and number of parking citations during that day
+    - `parse_cols_month(df)`
+        - `df`: sorted dataframe with parking citation data
+        - `Desc.`: combines all of the month's parking citations, returns a dataframe object
+    - `parse_cols_year(df)`
+        - `df`: output dataframe of parse_cols_month(df)
+        - `Desc.`: lists the parking citation count by month (rows) and by year (columns), returns a dataframe object
+    - `parse_cols_daily(month, df)`
+        - `df`: sorted dataframe with parking citation data
+        - `month`: month to capture data from
+        - `Desc.`: combines all of the month's parking citations, returns a dataframe object
+    - `parse_cols_daily2(df)`
+        - `df`: output dataframe of parse_cols_daily(df)
+        - `Desc.`: lists the parking citation count by day (rows) and by year (columns), returns a dataframe object
+    - `time_heatmap(df)`
+        - `df`: dataframe with parking citation data 
+        - `Desc.`: Parses the dataframe and plots time series heatmaps for the months of October, November, December                    and for all months over the years. Calls all parse helper functions except parse_cols_basic().
+    - `parse_cols_basic()`
+        - `Desc.`: Combines all of the file data and lists the amount of citations per day in order. Make sure to                       change the read paths for the .csv files
 
 
 
