@@ -261,7 +261,6 @@ cd src
 [San Diego Traffic Volumes (2007-2022)](https://data.sandiego.gov/datasets/traffic-volumes/)  
 [San Francisco Traffic Count](https://www.sfmta.com/reports/sfmta-traffic-count-data)   
 [Citibike Data (New York and New Jersey)](https://s3.amazonaws.com/tripdata/index.html)
-
 [San Diego Parking Citation Data](https://data.sandiego.gov/datasets/parking-citations/)  
 
 
