@@ -266,9 +266,9 @@ cd src
 
 # References
 **Data:**  
-[San Diego Traffic Volumes (2007-2022)](https://data.sandiego.gov/datasets/traffic-volumes/)  
-[San Francisco Traffic Count](https://www.sfmta.com/reports/sfmta-traffic-count-data)   
-[Citibike Data (New York and New Jersey)](https://s3.amazonaws.com/tripdata/index.html)
 [San Diego Parking Citation Data](https://data.sandiego.gov/datasets/parking-citations/)  
+[San Diego Parking Meters Data](https://data.sandiego.gov/datasets/parking-meters-locations/)
+[San Diego Parking Lots Data](https://data.sandiego.gov/datasets/park-locations/)
+[San Diego Population Data](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html)
 
 
