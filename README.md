@@ -113,27 +113,36 @@ It represents the visualization of parking citations datasets using bar plots, p
 
 - `Functions/`
     - `EDA.top_locations(df)`:
-        - `df`: original dataframe of databases 
+        - `df`: original dataframe of databases
+        - `Desc.`: returns a pie chart for the top ten locations with the most citations
     - `EDA.locations_by_count(df)`:
-        - `df`: original dataframe of databases 
+        - `df`: original dataframe of databases
+        - `Desc`: returns the bar plot for the top 20 locations of citation counts.
     - `EDA.vio_description_by_count(df, num_top=10)`:
         - `df`: original dataframe of databases
         - num_top = Number of top counts
+        - `Desc`: pie chart for the top 10 violation description by citation counts.
     - `EDA.fine_by_description(df)`:
         - `df`: original dataframe of databases
+        - `Desc`: returns a bar plot of mean violation fine by violation description
     - `EDA.date_by_citation(df)`:
         - `df`: original dataframe of databases
+        - `Desc`: returns the pie chart of dates with top ten citations count .
     - `EDA.top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST')`:
         - `df`: original dataframe of databases
         - 'SKI BEACH LOT 3000 INGRAHAM ST': location required
+        - `Desc`:  returns bar plot for number of citations aggrevated for all months for the highest location 
     - `EDA.top_location_monthly_count(df, '3600 5TH AV')`:
         - `df`: original dataframe of databases
         - '3600 5TH AV': location required
+        - `Desc`: returns the bar plot for number of citations aggrevated for all months for the second highest location 
     - `EDA.table_counts(df)`:
-        - `df`: original dataframe of databases 
+        - `df`: original dataframe of databases
+        - `Desc`: displays a table containing violation counts for violation description
     - `EDA.plot_citations_per_year(df, '3600 5TH AV')`:
         - `df`: original dataframe of databases
         - '3600 5TH AV': location required for yearwise analysis
+        - `Desc`: returns the plot for the number of citations per year for a specific location
     
 
 # Usage
