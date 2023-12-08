@@ -61,11 +61,11 @@ if __name__ == "__main__":
     seasonal_decomposition = time_series_analysis.seasonal_decompose(df, visualization=True)
 
 
-    Location = EDA.top_locations(a)
+    EDA.top_locations(a)
     location_count=EDA.locations_by_count(a)
     description_count=EDA.vio_description_by_count(a, num_top=10)
     EDA.fine_by_description(a)
-    EDA.date_by_citation(a)
+    CitatationDate=EDA.date_by_citation(a)
     EDA.top_location_monthly_count(a, 'SKI BEACH LOT 3000 INGRAHAM ST')
     EDA.top_location_monthly_count(a, '3600 5TH AV')
     EDA.table_counts(a)
