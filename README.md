@@ -266,9 +266,10 @@ cd src
 
 # References
 **Data:**  
-[San Diego Parking Citation Data](https://data.sandiego.gov/datasets/parking-citations/)  
-[San Diego Parking Meters Data](https://data.sandiego.gov/datasets/parking-meters-locations/)
-[San Diego Parking Lots Data](https://data.sandiego.gov/datasets/park-locations/)
-[San Diego Population Data](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html)
+[San Diego Parking Citation Data](https://data.sandiego.gov/datasets/parking-citations/)   
+[San Diego Parking Meters Data](https://data.sandiego.gov/datasets/parking-meters-locations/)  
+[San Diego Parking Lots Data](https://data.sandiego.gov/datasets/park-locations/)  
+[San Diego Population Data](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html)  
+
 
 
