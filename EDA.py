@@ -409,15 +409,14 @@ def plot_citations_per_year(data, specific_location):
     return(plt.show())
 
 if __name__ == "__main__":
-    a = read_dataset()
-    print(top_locations(a))
-    print(locations_by_count(a))
-    print(vio_description_by_count(a, num_top=10))
-    print(fine_by_description(a))
-    print(date_by_citation(a))
-    print(top_location_monthly_count(a, 'SKI BEACH LOT 3000 INGRAHAM ST'))
-    print(top_location_monthly_count(a, '3600 5TH AV'))
-    print(table_counts(a))
-    print(plot_citations_per_year(a, '3600 5TH AV'))
+    print(top_locations(df))
+    print(locations_by_count(df))
+    print(vio_description_by_count(df, num_top=10))
+    print(fine_by_description(df))
+    print(date_by_citation(df))
+    print(top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST'))
+    print(top_location_monthly_count(df, '3600 5TH AV'))
+    print(table_counts(df))
+    print(plot_citations_per_year(df, '3600 5TH AV'))
     
 
