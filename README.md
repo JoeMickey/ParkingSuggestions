@@ -12,25 +12,21 @@ Datasets
 
 # File Structure
 
-- `Datasets/`: This folder contains all the code (python scripts and notebooks)
-    - `process_sd_data.py`: Preprocessing script for San Diego Traffic Volumes (2007-2022) dataset
-    - `process_sd_visuals.ipynb`: Script that takes processed data and generates coordinate data for visualization
+- `Datasets/`: This folder contains all the csv files of Datasets
+    - `Parking Ticket Databases/`: original datasets of Parking Tickets in San Diego Between 2012-2023
+    - `population_cities_2010_2022.csv`: original dataset of Population in Cities of San Diego Between 2012-2022
+    - `parking_meters_loc_datasd.csv`: original dataset of Parking Meters in San Diego Between 2018-2023
+    - `park_lots_loc_datasd.csv`: original dataset of Parking Lots in San Diego Between 2016-2023
+
+- `Web App/`: This folder contains files for Website Application
+    - `build/`: files for website development
+    - `future_scope.py`: codes for parking suggestion generation 
     - `display_sd.ipynb`: Script that displays the SD map
 
     - `process_sf_data.py`: Preprocessing script for San Francisco Traffic Count dataset
     - `process_sf_visuals.ipynb`: Script that takes processed data and generates coordinate data for visualization specifically for the SF dataset
     - `display_sf.ipynb`: Script that displays the SF map
 
-    - `process_ny.ipynb`: Script that takes processed data and generates coordinate data for visualization specifically for the NY dataset. Code is based off: https://python.plainenglish.io/how-to-build-route-heatmaps-in-python-ebac363471d7
-    - `display_ny.ipynb`: Script that displays the NY map. Code is based off: https://python.plainenglish.io/how-to-build-route-heatmaps-in-python-ebac363471d7
-
-    
-
-- `Datasets/`: all the csv files of Datasets
-    - `park_lots_loc_datasd.csv`: original dataset gets processed into this .csv file
-    - `population_cities_2010_2022.csv`: this is sd_data_processed.csv after removing unusable datapoints or NaN values
-    - `parking_meters_loc_datasd.csv`: this is sd_data_processed.csv after removing unusable datapoints or NaN values
-    - `park_lots_loc_datasd.csv`: this is the final csv file containing all coordinates to be plotted for display_sd.ipynb
 
 
 
