@@ -21,11 +21,10 @@ Datasets
 - `Web App/`: This folder contains files for Website Application
     - `build/`: files for website development
     - `future_scope.py`: codes for parking suggestion generation 
-    - `display_sd.ipynb`: Script that displays the SD map
+    - `suggestion_model.pkl`: model for suggestion generation
+    - `OneHotEncoders.pkl`: one-hot encoders for suggestion generation
 
-    - `process_sf_data.py`: Preprocessing script for San Francisco Traffic Count dataset
-    - `process_sf_visuals.ipynb`: Script that takes processed data and generates coordinate data for visualization specifically for the SF dataset
-    - `display_sf.ipynb`: Script that displays the SF map
+
 
 
 
