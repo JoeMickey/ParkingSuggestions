@@ -28,8 +28,13 @@ Datasets
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
 
 
+# Time_Series_Analysis
+Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
 
-
+- `Functions/`:
+    - `date_count_heatmap.main(df)/`:
+        - `df`: dataframe object containing parking citations in sorted order from Jan 2012 to Oct 2023
+        - `Desc.`: Parses data and creates  all time series graphics
 
 
 
@@ -76,6 +81,16 @@ To display the NY map
 
 end
 
+To display time series graphics
+
+1. 'import time_series_analysis.py'
+
+2. ensure that the dataframe with parking citation data has been created and is in order of time
+
+3. call 'time_series_analysis.main(df)', where df is the dataframe consisting of parking citation data
+
+end
+
 # Installations
 
 **Before running this project, please install the following Python libraries:**
@@ -86,12 +101,15 @@ end
 - requests
 - tqdm
 - folium
+- seaborn
+- matplotlib
 
 **These packages are built-in. No install needed:**
 
 - sys
 - ast
 - time
+- datetime
 
 **Versions used:**
 
@@ -102,6 +120,8 @@ end
 - requests 2.28.2
 - tqdm 4.65.0
 - folium 0.14.0
+- seaborn 0.13.0
+- matplotlib 3.8.2
 
 All of the dependencies can be installed in the terminal using the command:
 
@@ -187,4 +207,6 @@ cd src
 [San Diego Traffic Volumes (2007-2022)](https://data.sandiego.gov/datasets/traffic-volumes/)  
 [San Francisco Traffic Count](https://www.sfmta.com/reports/sfmta-traffic-count-data)   
 [Citibike Data (New York and New Jersey)](https://s3.amazonaws.com/tripdata/index.html)
+[San Diego Parking Citation Data](https://data.sandiego.gov/datasets/parking-citations/)  
+
 
