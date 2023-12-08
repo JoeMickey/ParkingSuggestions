@@ -111,30 +111,29 @@ Visualizes the number of parking citations using heatmaps over the course of 201
 It represents the visualization of parking citations datasets using bar plots, pie chart, table observing the correlation between parameters like number of citations, location, type of violation, date etc for the period of last 10 years
 
 - `Functions/`
-    - `time_series_analysis.main()/`:
-        - `Desc.`: import datasets as DataFrame
-    - `time_series_analysis.date_reframe(df, date_column, daily = False, monthly = False, yearly = False)/`:
-        - `df`: original dataframe of databases
-        - `date_column`: the column name of date
-        - `daily`: if need daily count (bool)
-        - `monthly`: if need monthly count (bool)
-        - `yearly`: if need yearly count (bool)
-        - `Desc.`: the periodic frequency of the tickets
-    - `time_series_analysis.regression_visualization(model, x, y, category)/`:
-        - `model`: the regression model
-        - `x`: the original x variable
-        - `y`: the original y variable
-        - `category`: the required plot (population/parking meters)
-        - `Desc.`: scattered points and linear ploting
-    - `time_series_analysis.population_correlation(df, include_2020 = True, visualization = False)/`:
-        - `df`: the original DataFrame
-        - `include_2020`: if include the impact of pandamic (bool)
-        - `visualization`: if show the visualization (bool)
-        - `Desc.`: return P-Value of the regression for population and parking tickets correlation analysis
-
+    - EDA.top_locations(a):
+        - `a`: original dataframe of databases 
+    - EDA.locations_by_count(a)
+        - `a`: original dataframe of databases 
+    - EDA.vio_description_by_count(a, num_top=10)
+        - `a`: original dataframe of databases
+        - num_top = Number of top counts
+    - EDA.fine_by_description(a)
+        - `a`: original dataframe of databases
+    - EDA.date_by_citation(a)
+        - `a`: original dataframe of databases
+    - EDA.top_location_monthly_count(a, 'SKI BEACH LOT 3000 INGRAHAM ST')
+        - `a`: original dataframe of databases
+        - 'SKI BEACH LOT 3000 INGRAHAM ST': location required
+    - EDA.top_location_monthly_count(a, '3600 5TH AV')
+        - `a`: original dataframe of databases
+        - '3600 5TH AV': location required
+    - EDA.table_counts(a)
+        - `a`: original dataframe of databases 
+    - EDA.plot_citations_per_year(a, '3600 5TH AV')
+        - `a`: original dataframe of databases
+        - '3600 5TH AV': location required for yearwise analysis
     
-
-
 
 # Usage
 
