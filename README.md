@@ -112,27 +112,27 @@ Visualizes the number of parking citations using heatmaps over the course of 201
 It represents the visualization of parking citations datasets using bar plots, pie chart, table observing the correlation between parameters like number of citations, location, type of violation, date etc for the period of last 10 years
 
 - `Functions/`
-    - EDA.top_locations(a):
-        - `a`: original dataframe of databases 
-    - EDA.locations_by_count(a)
-        - `a`: original dataframe of databases 
-    - EDA.vio_description_by_count(a, num_top=10)
-        - `a`: original dataframe of databases
+    - `EDA.top_locations(df)`:
+        - `df`: original dataframe of databases 
+    - `EDA.locations_by_count(df)`:
+        - `df`: original dataframe of databases 
+    - `EDA.vio_description_by_count(df, num_top=10)`:
+        - `df`: original dataframe of databases
         - num_top = Number of top counts
-    - EDA.fine_by_description(a)
-        - `a`: original dataframe of databases
-    - EDA.date_by_citation(a)
-        - `a`: original dataframe of databases
-    - EDA.top_location_monthly_count(a, 'SKI BEACH LOT 3000 INGRAHAM ST')
-        - `a`: original dataframe of databases
+    - `EDA.fine_by_description(df)`:
+        - `df`: original dataframe of databases
+    - `EDA.date_by_citation(df)`:
+        - `df`: original dataframe of databases
+    - `EDA.top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST')`:
+        - `df`: original dataframe of databases
         - 'SKI BEACH LOT 3000 INGRAHAM ST': location required
-    - EDA.top_location_monthly_count(a, '3600 5TH AV')
-        - `a`: original dataframe of databases
+    - `EDA.top_location_monthly_count(df, '3600 5TH AV')`:
+        - `df`: original dataframe of databases
         - '3600 5TH AV': location required
-    - EDA.table_counts(a)
-        - `a`: original dataframe of databases 
-    - EDA.plot_citations_per_year(a, '3600 5TH AV')
-        - `a`: original dataframe of databases
+    - `EDA.table_counts(df)`:
+        - `df`: original dataframe of databases 
+    - `EDA.plot_citations_per_year(df, '3600 5TH AV')`:
+        - `df`: original dataframe of databases
         - '3600 5TH AV': location required for yearwise analysis
     
 
