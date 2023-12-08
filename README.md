@@ -114,11 +114,19 @@ Visualizes the number of parking citations using heatmaps over the course of 201
 
 To display time series graphics
 
-1. 'import time_series_analysis.py'
+1. 'import time_series_analysis'
 
 2. ensure that the dataframe with parking citation data has been created and is in order of time
 
 3. call 'time_series_analysis.main(df)', where df is the dataframe consisting of parking citation data
+
+end
+
+To get parking suggestion
+
+1. 'import future_scope'
+
+2. call 'future_scope.parking_suggestion(date, location)', where date and location are the query date and location
 
 end
 
