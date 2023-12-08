@@ -157,6 +157,9 @@ end
 - folium
 - seaborn
 - matplotlib
+- statsmodels
+- prophet
+- geopy
 
 **These packages are built-in. No install needed:**
 
@@ -164,6 +167,8 @@ end
 - ast
 - time
 - datetime
+- collections
+- pickle
 
 **Versions used:**
 
@@ -176,6 +181,9 @@ end
 - folium 0.14.0
 - seaborn 0.13.0
 - matplotlib 3.8.2
+- statsmodels 0.14.0
+- prophet 1.1.5
+- geopy 2.4.0
 
 All of the dependencies can be installed in the terminal using the command:
 
