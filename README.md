@@ -26,6 +26,7 @@ Datasets
  
 - `ECE143-Group10_Final Presentation.pdf`: final presentation slides for our project
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
+- `EDA.py`: It contains the code with functions of various plots like bar graph, pie chart for the analysis of parameters in the dataset
 - `Visualization.ipynb`: visualizations of the analysis
 
 # Time_Series_Analysis
@@ -155,6 +156,15 @@ To get parking suggestion
 
 end
 
+To display the data analysis plot
+
+1. 'import EDA'
+
+2. Check for the dataframe with parking citation data if it has been created
+
+3. call 'EDA.main(a)', where a is the dataframe consisting of parking citation data
+
+end
 # Installations
 
 **Before running this project, please install the following Python libraries:**
@@ -170,6 +180,8 @@ end
 - statsmodels
 - prophet
 - geopy
+- prettytable
+  
 
 **These packages are built-in. No install needed:**
 
@@ -179,6 +191,8 @@ end
 - datetime
 - collections
 - pickle
+- calendar
+  
 
 **Versions used:**
 
