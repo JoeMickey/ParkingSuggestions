@@ -171,7 +171,7 @@ To display the data analysis plot
 
 2. Check for the dataframe with parking citation data if it has been created
 
-3. call 'EDA.main(a)', where a is the dataframe consisting of parking citation data
+3. call 'EDA.main(df)', where a is the dataframe consisting of parking citation data
 
 end
 # Installations
