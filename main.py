@@ -61,7 +61,7 @@ if __name__ == "__main__":
     seasonal_decomposition = time_series_analysis.seasonal_decompose(df, visualization=True)
 
 
-    Top_location= EDA.top_locations(a)
+    Location = EDA.top_locations(a)
     location_count=EDA.locations_by_count(a)
     description_count=EDA.vio_description_by_count(a, num_top=10)
     EDA.fine_by_description(a)
