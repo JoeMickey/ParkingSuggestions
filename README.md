@@ -31,7 +31,7 @@ Datasets
 # Time_Series_Analysis
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
 
-- `Functions/`:
+- `Functions/`
     - `time_series_analysis.main()/`:
         - `Desc.`: import datasets as DataFrame
     - `time_series_analysis.date_reframe(df, date_column, daily = False, monthly = False, yearly = False)/`:
@@ -87,7 +87,25 @@ Visualizes the number of parking citations using heatmaps over the course of 201
         - `df`: output dataframe of parse_cols_daily(df)
         - `Desc.`: lists the parking citation count by day (rows) and by year (columns), returns a dataframe object
     - `time_series_analysis.parse_cols_basic()`
-        - `Desc.`: Combines all of the file data and lists the amount of citations per day in order. Make sure to                       change the read paths for the .csv files
+        - `Desc.`: Combines all of the file data and lists the amount of citations per day in order. Make sure to change the read paths for the .csv files 
+    - `future_scope.if_holiday(date)`
+        - `date`: string of a date
+        - `Desc.`: return bool to identify if the date is a holiday
+    - `future_scope.get_nearby_points_of_interest(lat, lng)`
+        - `lat`: latitude
+        - `lng`: longitude
+        - `Desc.`: return bool to identify if the location is near an interest
+    - `future_scope.get_address_details_geopy(address)`
+        - `address`: string of address within San Diego
+        - `Desc.`: return detailed components of address
+    - `future_scope.get_nearby_parking(lat, lng)`
+        - `lat`: latitude
+        - `lng`: longitude
+        - `Desc.`: return bool to identify if the location is near a parking meter
+    - `future_scope.parking_suggestion(date, location)`
+        - `date`: string of query date
+        - `location`: string of query location
+        - `Desc.`: return bool to identify the risk of parking
     
 
 
