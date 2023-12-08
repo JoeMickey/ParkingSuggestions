@@ -30,11 +30,11 @@ def read_dataset():
     
     con_list = []
     for f in read_list_rev:
-        df = pd.read_csv('./Datasets/Parking Ticket Databases' + f) # make sure to change this to the correct python read path
+        df = pd.read_csv('./Datasets/Parking Ticket Databases/' + f) # make sure to change this to the correct python read path
         df = df.reindex(index=df.index[::-1])
         con_list.append(df)
     for f in read_list_norm:
-        df = pd.read_csv('./Datasets/Parking Ticket Databases' + f) # make sure to change this to the correct python read path
+        df = pd.read_csv('./Datasets/Parking Ticket Databases/' + f) # make sure to change this to the correct python read path
         con_list.append(df)
     
     output_df = pd.concat(con_list)
@@ -124,7 +124,7 @@ def population_correlation(df, include_2020 = True, visualization = False):
     issue_yearly_frequency = date_reframe(df, date_column='date_issue', yearly=True)['yearly']
 
     # get yearly population of San Diego
-    population = pd.read_csv("./DataSource/population_cities_2010_2022.csv", index_col="City")
+    population = pd.read_csv("./Datasets/population_cities_2010_2022.csv", index_col="City")
     sd_cities = ["San Diego city", "Chula Vista city", "Oceanside city", "Escondido city", "Carlsbad city", "El Cajon city", "Vista city", "San Marcos city", "Encinitas city", "National City city"]
     for index, row in population.iterrows():
         if index not in sd_cities: population = population.drop(index)
@@ -173,7 +173,7 @@ def parking_meters_correlation(df, visualization = False):
     issue_monthly_frequency = frequency['monthly']
 
     # get parking meters dataset
-    parking_meters = pd.read_csv("./DataSource/parking_meters_loc_datasd.csv")
+    parking_meters = pd.read_csv("./Datasets/parking_meters_loc_datasd.csv")
 
     new_meters_monthly = date_reframe(parking_meters, date_column='date_inventory', monthly=True)['monthly']
 
@@ -205,7 +205,7 @@ def parking_meters_scatter_plot(df):
     issue_daily_frequency = date_reframe(df, date_column='date_issue', daily=True)['daily']
 
     # get parking meters dataset
-    parking_meters = pd.read_csv("./DataSource/parking_meters_loc_datasd.csv")
+    parking_meters = pd.read_csv("./Datasets/parking_meters_loc_datasd.csv")
     new_meters_daily = date_reframe(parking_meters, date_column='date_inventory', daily=True)['daily']
 
     # align periods between parking meters dataset and parking tickets dataset
