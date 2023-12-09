@@ -10,3 +10,6 @@ statsmodels == 0.14.0
 prophet == 1.1.5
 geopy == 2.4.0
 prettytable == 3.9.0
+branca == 0.7.0
+vincent == 0.4
+googlemaps == 4.10.0
