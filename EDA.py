@@ -40,7 +40,7 @@ def read_dataset():
     return output_df
 
 
-def top_locations(location_counts, num_top=10):
+def top_locations(data, num_top=10):
     """
     This function returns a pie chart for the top ten locations with the most citations.
 
@@ -51,10 +51,8 @@ def top_locations(location_counts, num_top=10):
     Returns:
              The pie chart
     """
-    a=read_dataset();
     # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Convert 'location' column to uppercase
     data['location'] = data['location'].str.upper()
 
@@ -84,10 +82,7 @@ def locations_by_count(data, num_top=20):
     Returns:
             The bar plot
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the number of top locations is valid
     assert num_top > 0, "Number of top locations should be greater than 0."
 
@@ -106,41 +101,6 @@ def locations_by_count(data, num_top=20):
 
     return(plt.show())
 
-
-def vio_description_by_count(data, num_top=20):
-    """
-    This function returns the pie chart for the top 10 violation description by citation counts.
-
-    Parameters:
-    - data (pd.DataFrame): Input DataFrame containing 'location' column.
-    - num_top (int): Number of top locations to display in the bar chart.
-
-    Returns:
-            The pie chart
-    """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
-    # Ensure the number of top locations is valid
-    assert num_top > 0, "Number of violation description count should be greater than 0."
-
-    df['date_issue'] = pd.to_datetime(df['date_issue'])
-    df['date_creation'] = pd.to_datetime(df['date_creation'])
-    
-    # Extract month and year from the 'date_issue' column
-    df['month_year'] = df['date_issue'].dt.to_period('M')
-
-    # Group by 'vio_desc' and count the number of citations for each violation description
-    vio_desc_counts = df.groupby('vio_desc')['citation_id'].count().sort_values(ascending=False).head(10)
-
-    # Plot the pie chart
-    plt.figure(figsize=(6, 6))
-    plt.pie(vio_desc_counts, labels=vio_desc_counts.index, autopct='%1.1f%%', startangle=45)
-    plt.title('Distribution of Citations by Violation Description')
-    return(plt.show())
-
-
 def fine_by_description(data, num_top=10):
     """
     This function returns a bar plot of mean violation fine by violation description.
@@ -152,10 +112,7 @@ def fine_by_description(data, num_top=10):
     Returns:
              The Bar plot
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the number of top violations is valid
     assert num_top > 0, "Number of top violations should be greater than 0."
 
@@ -188,10 +145,7 @@ def date_by_citation(data, num_top=10):
     Returns:
              The pie chart
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the number of top dates is valid
     assert num_top > 0, "Number of top dates should be greater than 0."
 
@@ -223,10 +177,7 @@ def top_location_monthly_count(data, specific_location):
     Returns:
               The bar plot
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the specific location is provided
     assert specific_location, "Specific location is not provided."
 
@@ -271,10 +222,7 @@ def top_location_monthly_count(data, specific_location):
     Returns:
             the bar plot
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the specific location is provided
     assert specific_location, "Specific location is not provided."
 
@@ -318,10 +266,7 @@ def table_counts(data, num_top=10):
     Returns:
               The table with citation counts for violation description 
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Ensure the number of top violations is valid
     assert num_top > 0, "Number of top violations should be greater than 0."
 
@@ -355,10 +300,7 @@ def plot_citations_per_year(data, specific_location):
     Returns:
              The bar plot.
     """
-    a=read_dataset();
-    # Ensure the input DataFrame is not empty
-    assert not data.empty, "Input DataFrame is empty."
-
+    assert isinstance(data, pd.DataFrame)
     # Convert location to uppercase
     specific_location = specific_location.upper()
 
@@ -411,7 +353,6 @@ def plot_citations_per_year(data, specific_location):
 if __name__ == "__main__":
     print(top_locations(df))
     print(locations_by_count(df))
-    print(vio_description_by_count(df, num_top=10))
     print(fine_by_description(df))
     print(date_by_citation(df))
     print(top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST'))
