@@ -31,6 +31,7 @@ Datasets
 - `Visualization.ipynb`: visualizations of the analysis
 - `geospatial_analysis_parking.html`: the interactive map generated from `geo_spatial_analysis.py`
 - `main.py`: the main file with all executing codes for our functions
+- `requirements.txt`: the required third-party libraries and corresponding versions
 
 # Time_Series_Analysis
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
