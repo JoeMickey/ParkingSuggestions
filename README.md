@@ -108,7 +108,7 @@ Visualizes the number of parking citations using heatmaps over the course of 201
         - `location`: string of query location
         - `Desc.`: return bool to identify the risk of parking
 
-    # EDA
+# EDA
 It represents the visualization of parking citations datasets using bar plots, pie chart, table observing the correlation between parameters like number of citations, location, type of violation, date etc for the period of last 10 years
 
 - `Functions/`
