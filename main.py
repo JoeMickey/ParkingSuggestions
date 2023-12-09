@@ -3,6 +3,8 @@
 import pandas as pd
 import time_series_analysis
 import EDA
+import geo_spatial_analysis
+import googlemaps
 
 def read_dataset():
     '''
@@ -41,6 +43,20 @@ def read_dataset():
 if __name__ == "__main__":
 
     df = read_dataset()
+    
+    # exploratory data analysis
+    
+    # getting the top10 locations
+    location_count=EDA.locations_by_count(df)
+    
+    # plotting EDA distributions
+    EDA.top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST')
+    EDA.top_location_monthly_count(df, '3600 5TH AV')
+    EDA.plot_citations_per_year(df, '3600 5TH AV')
+    EDA.top_locations(df)
+    EDA.table_counts(df)
+    EDA.fine_by_description(df)
+    CitatationDate=EDA.date_by_citation(df)
 
     # population regression analysis (Exclude 2020)
     population_p_value = time_series_analysis.population_correlation(df, include_2020=False, visualization=True)
@@ -59,14 +75,9 @@ if __name__ == "__main__":
 
     # seasonal decompose
     seasonal_decomposition = time_series_analysis.seasonal_decompose(df, visualization=True)
-
-
-    EDA.top_locations(df)
-    location_count=EDA.locations_by_count(df)
-    description_count=EDA.vio_description_by_count(df, num_top=10)
-    EDA.fine_by_description(df)
-    CitatationDate=EDA.date_by_citation(df)
-    EDA.top_location_monthly_count(df, 'SKI BEACH LOT 3000 INGRAHAM ST')
-    EDA.top_location_monthly_count(df, '3600 5TH AV')
-    EDA.table_counts(df)
-    EDA.plot_citations_per_year(df, '3600 5TH AV')
+    
+    # geospatial analysis
+    gmaps = googlemaps.Client(key='AIzaSyDQOshvWHRQFelF3qwOSLw8iPInyuMx_sU')
+    folium_map = geo_spatial_analysis.create_geo_spatial_analysis(df, gmaps)
+    folium.LayerControl(collapsed=False).add_to(folium_map)
+        
