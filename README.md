@@ -144,7 +144,7 @@ It represents the visualization of parking citations datasets using bar plots, p
 It represents the visualization of parking citations datasets onto the Folium Open StreetMap, the color of the citation loaction shows the intensity of citations.
 Hovering over a location shows the name & average fine for last 10 years at the street. And we have yearly, monthly and Top 3 Violations Reasons distribution for every location on the map. 
 
-Since, the Map Visualization is not Available in Visualizations.ipynb due to Jupyter Trust Notebook. A seperate standalone HTML geospatal_analaysis_parking..html is added
+Since, the Map Visualization is not Available in Visualizations.ipynb due to Jupyter Trust Notebook. A seperate standalone HTML geospatal_analaysis_parking.html is added
 
 - `Functions/`
     - `geo_spatial_analysis.read_geo_data(dirPath, year)`:
