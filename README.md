@@ -249,7 +249,6 @@ end
 - prophet
 - geopy
 - prettytable
-- folium
 - googlemaps
 - vincent
 - branca.colormap
@@ -283,9 +282,10 @@ end
 - prophet 1.1.5
 - geopy 2.4.0
 - prettytable 3.9.0
+- googlemaps 4.10.0
 - vincent 0.4
 - branca 0.7.0
-- googlemaps 4.10.0
+
 
 All of the dependencies can be installed in the terminal using the command:
 
