@@ -26,8 +26,10 @@ Datasets
  
 - `ECE143-Group10_Final Presentation.pdf`: final presentation slides for our project
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
+- `geo_spatial_analysis.py`: functions used for spatial analysis including interactive maps
 - `EDA.py`: It contains the code with functions of various plots like bar graph, pie chart for the analysis of parameters in the dataset
 - `Visualization.ipynb`: visualizations of the analysis
+- `geospatial_analysis_parking.html`: the interactive map generated from `geo_spatial_analysis.py`
 - `main.py`: the main file with all executing codes for our functions
 
 # Time_Series_Analysis
