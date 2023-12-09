@@ -108,7 +108,7 @@ Visualizes the number of parking citations using heatmaps over the course of 201
         - `location`: string of query location
         - `Desc.`: return bool to identify the risk of parking
 
-# EDA
+    # Exploratory Data Analysis
 It represents the visualization of parking citations datasets using bar plots, pie chart, table observing the correlation between parameters like number of citations, location, type of violation, date etc for the period of last 10 years
 
 - `Functions/`
@@ -118,10 +118,6 @@ It represents the visualization of parking citations datasets using bar plots, p
     - `EDA.locations_by_count(df)`:
         - `df`: original dataframe of databases
         - `Desc`: returns the bar plot for the top 20 locations of citation counts.
-    - `EDA.vio_description_by_count(df, num_top=10)`:
-        - `df`: original dataframe of databases
-        - num_top = Number of top counts
-        - `Desc`: pie chart for the top 10 violation description by citation counts.
     - `EDA.fine_by_description(df)`:
         - `df`: original dataframe of databases
         - `Desc`: returns a bar plot of mean violation fine by violation description
@@ -143,7 +139,51 @@ It represents the visualization of parking citations datasets using bar plots, p
         - `df`: original dataframe of databases
         - '3600 5TH AV': location required for yearwise analysis
         - `Desc`: returns the plot for the number of citations per year for a specific location
-    
+
+# GeoSpatial Analysis
+It represents the visualization of parking citations datasets onto the Folium Open StreetMap, the color of the citation loaction shows the intensity of citations.
+Hovering over a location shows the name & average fine for last 10 years at the street. And we have yearly, monthly and Top 3 Violations Reasons distribution for every location on the map. 
+
+- `Functions/`
+    - `EDA.read_geo_data(dirPath, year)`:
+        - `dirPath`: location of all dataset csv are present
+        - `year`: from which year the dataset needs to be considered
+        - `Desc.`: reads in the dataset csv files, for geo-coordinates creation from a specific year and return the dataframe.
+    - `EDA.get_geo_coordinates(geo_dataframe, gmaps, min_citations)`:
+        - `geo_dataframe`: pandas dataframe for years specified by the user.
+        - `gmaps`: object from google maps python module, based on user Client ID
+        - `min_citations`: minimum number of citations to be considered for geo loaction 
+        - `Desc.`: the Google Maps Python Module to get the latitude, longitude of a street address which we got from the database and returns that to a dictionary.
+    - `EDA. create_date_month_df(df)`:
+        - `df`: the full dataset pandas dataframe
+        - `Desc.`: create month and year column in the dataset
+    - `EDA. get_citations_count(df, min_citations)`:
+        - `df`: the full dataset pandas dataframe
+        - `min_citations`: minimum number of citations to consider
+        - `Desc.`: function takes in the dataset and for the full dataset returns a dict
+    - `EDA. create_geo_dataframe_dict(df, citations_geo_dict)`:
+        - `df`: the full dataset pandas dataframe
+        - `citations_geo_dict`: dictionary of all the citations locations
+        - `Desc.`: append the monthly, yearly ditribution for that location from the dataset and appends those keys to the 
+    location dict.
+
+    - `EDA. create_map_markers(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
+        - `distribution`: string whether is monthly yearly or vios
+        - `citations_geo_dict`: dictionary of all the citations locations
+        - `plotting_list`: dictionary of all the citations loctions
+        - `legend_string`: dictionary of all the citations loctions
+        - `citations_count_list`: dictionary of all the citations loctions
+        - `m`: dictionary of all the citations loctions
+        - `Desc.`: adds the markers over the folium map
+    - `EDA. create_map_marker_vios(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
+        - `distribution`: string whether is monthly yearly or vios
+        - `citations_geo_dict`: dictionary of all the citations locations
+        - `plotting_list`: dictionary of all the citations loctions
+        - `legend_string`: dictionary of all the citations loctions
+        - `citations_count_list`: dictionary of all the citations loctions
+        - `m`: dictionary of all the citations loctions
+        - `Desc.`: adds the markers over the folium map 
+                 
 
 # Usage
 
@@ -174,6 +214,19 @@ To display the data analysis plot
 3. call 'EDA.main(df)', where a is the dataframe consisting of parking citation data
 
 end
+
+To display the geospatial analysis plot
+
+1. 'import geo_spatial_analysis.py'
+
+2. Check for the dataframe with parking citation data if it has been created
+   
+3. Need a google client ID for googleMaps to work.
+
+4. call 'geo_spatial_analysis.main(df)', where a is the dataframe consisting of parking citation data
+
+end
+
 # Installations
 
 **Before running this project, please install the following Python libraries:**
@@ -190,6 +243,10 @@ end
 - prophet
 - geopy
 - prettytable
+- folium
+- googlemaps
+- vincent
+- branca.colormap
   
 
 **These packages are built-in. No install needed:**
@@ -201,6 +258,8 @@ end
 - collections
 - pickle
 - calendar
+- glob
+- os
   
 
 **Versions used:**
@@ -217,6 +276,10 @@ end
 - statsmodels 0.14.0
 - prophet 1.1.5
 - geopy 2.4.0
+- prettytable 3.9.0
+- vincent 0.4
+- branca 0.7.0
+- googlemaps 4.10.0
 
 All of the dependencies can be installed in the terminal using the command:
 
@@ -230,6 +293,3 @@ pip install -r requirements.txt
 [San Diego Parking Meters Data](https://data.sandiego.gov/datasets/parking-meters-locations/)  
 [San Diego Parking Lots Data](https://data.sandiego.gov/datasets/park-locations/)  
 [San Diego Population Data](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-total.html)  
-
-
-
