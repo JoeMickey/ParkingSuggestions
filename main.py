@@ -77,7 +77,7 @@ if __name__ == "__main__":
     seasonal_decomposition = time_series_analysis.seasonal_decompose(df, visualization=True)
     
     # geospatial analysis
-    gmaps = googlemaps.Client(key='AIzaSyDQOshvWHRQFelF3qwOSLw8iPInyuMx_sU')
+    gmaps = googlemaps.Client(key='')
     folium_map = geo_spatial_analysis.create_geo_spatial_analysis(df, gmaps)
     folium.LayerControl(collapsed=False).add_to(folium_map)
         
