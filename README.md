@@ -28,7 +28,6 @@ Datasets
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
 - `EDA.py`: It contains the code with functions of various plots like bar graph, pie chart for the analysis of parameters in the dataset
 - `Visualization.ipynb`: visualizations of the analysis
-- `requirements.txt`: the required third-party libraries and corresponding versions
 
 # Time_Series_Analysis
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
@@ -145,30 +144,32 @@ It represents the visualization of parking citations datasets using bar plots, p
 It represents the visualization of parking citations datasets onto the Folium Open StreetMap, the color of the citation loaction shows the intensity of citations.
 Hovering over a location shows the name & average fine for last 10 years at the street. And we have yearly, monthly and Top 3 Violations Reasons distribution for every location on the map. 
 
+Since, the Map Visualization is not Available in Visualizations.ipynb due to Jupyter Trust Notebook. A seperate standalone HTML geospatal_analaysis_parking..html is added
+
 - `Functions/`
-    - `EDA.read_geo_data(dirPath, year)`:
+    - `geo_spatial_analysis.read_geo_data(dirPath, year)`:
         - `dirPath`: location of all dataset csv are present
         - `year`: from which year the dataset needs to be considered
         - `Desc.`: reads in the dataset csv files, for geo-coordinates creation from a specific year and return the dataframe.
-    - `EDA.get_geo_coordinates(geo_dataframe, gmaps, min_citations)`:
+    - `geo_spatial_analysis.get_geo_coordinates(geo_dataframe, gmaps, min_citations)`:
         - `geo_dataframe`: pandas dataframe for years specified by the user.
         - `gmaps`: object from google maps python module, based on user Client ID
         - `min_citations`: minimum number of citations to be considered for geo loaction 
         - `Desc.`: the Google Maps Python Module to get the latitude, longitude of a street address which we got from the database and returns that to a dictionary.
-    - `EDA. create_date_month_df(df)`:
+    - `geo_spatial_analysis.create_date_month_df(df)`:
         - `df`: the full dataset pandas dataframe
         - `Desc.`: create month and year column in the dataset
-    - `EDA. get_citations_count(df, min_citations)`:
+    - `geo_spatial_analysis.get_citations_count(df, min_citations)`:
         - `df`: the full dataset pandas dataframe
         - `min_citations`: minimum number of citations to consider
         - `Desc.`: function takes in the dataset and for the full dataset returns a dict
-    - `EDA. create_geo_dataframe_dict(df, citations_geo_dict)`:
+    - `geo_spatial_analysis.create_geo_dataframe_dict(df, citations_geo_dict)`:
         - `df`: the full dataset pandas dataframe
         - `citations_geo_dict`: dictionary of all the citations locations
         - `Desc.`: append the monthly, yearly ditribution for that location from the dataset and appends those keys to the 
     location dict.
 
-    - `EDA. create_map_markers(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
+    - `geo_spatial_analysis.create_map_markers(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
         - `distribution`: string whether is monthly yearly or vios
         - `citations_geo_dict`: dictionary of all the citations locations
         - `plotting_list`: dictionary of all the citations loctions
@@ -176,7 +177,7 @@ Hovering over a location shows the name & average fine for last 10 years at the 
         - `citations_count_list`: dictionary of all the citations loctions
         - `m`: dictionary of all the citations loctions
         - `Desc.`: adds the markers over the folium map
-    - `EDA. create_map_marker_vios(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
+    - `geo_spatial_analysis.create_map_marker_vios(distribution, citations_geo_dict, plotting_list, legend_string, citations_count_list, m)`:
         - `distribution`: string whether is monthly yearly or vios
         - `citations_geo_dict`: dictionary of all the citations locations
         - `plotting_list`: dictionary of all the citations loctions
