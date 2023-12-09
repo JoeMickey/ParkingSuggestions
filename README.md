@@ -28,6 +28,7 @@ Datasets
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
 - `EDA.py`: It contains the code with functions of various plots like bar graph, pie chart for the analysis of parameters in the dataset
 - `Visualization.ipynb`: visualizations of the analysis
+- `requirements.txt`: the required third-party libraries and corresponding versions
 
 # Time_Series_Analysis
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
