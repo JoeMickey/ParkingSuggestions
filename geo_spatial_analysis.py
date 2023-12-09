@@ -294,6 +294,6 @@ def create_geo_spatial_analysis(df, gmaps):
 
 if __name__ == "__main__":
     df = read_dataset()
-    gmaps = googlemaps.Client(key='AIzaSyDQOshvWHRQFelF3qwOSLw8iPInyuMx_sU')
+    gmaps = googlemaps.Client(key='')
     folium_map = create_geo_spatial_analysis(df, gmaps)
     folium.LayerControl(collapsed=False).add_to(folium_map)
