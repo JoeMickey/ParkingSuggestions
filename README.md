@@ -24,7 +24,6 @@ Datasets
     - `suggestion_model.pkl`: model for suggestion generation
     - `OneHotEncoders.pkl`: one-hot encoders for suggestion generation
  
-- `ECE143-Group10_Final Presentation.pdf`: final presentation slides for our project
 - `time_series_analysis.py`: functions used for time series analysis including correlation exploration, regression, seasonal decompose, heatmap
 - `geo_spatial_analysis.py`: functions used for spatial analysis including interactive maps
 - `EDA.py`: It contains the code with functions of various plots like bar graph, pie chart for the analysis of parameters in the dataset
@@ -32,6 +31,7 @@ Datasets
 - `geospatial_analysis_parking.html`: the interactive map generated from `geo_spatial_analysis.py`
 - `main.py`: the main file with all executing codes for our functions
 - `requirements.txt`: the required third-party libraries and corresponding versions
+- `Future Scope-Parking Suggestion.py`: Primary model based on Extreme Gradient Boosting
 
 # Time_Series_Analysis
 Visualizes the number of parking citations using heatmaps over the course of 2012 - 2023. Creates plots of all months, all days in October, November, and December. Creates time series analyses and describes daily, weekly, and seasonal trends
